@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina Semanal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💪 Tu Rutina Semanal</h1>
+      <p id="frase"></p>
+      <button id="toggle-mode">🌙 Modo Claro/Oscuro</button>
+    </header>
+
+    <main id="main-view">
+      <h2>Selecciona un día</h2>
+      <div class="dias">
+        <button onclick="verRutina('lunes')">Lunes - Pecho</button>
+        <button onclick="verRutina('martes')">Martes - Espalda + Abs</button>
+        <button onclick="verRutina('miercoles')">Miércoles - Piernas</button>
+        <button onclick="verRutina('jueves')">Jueves - Hombros + Abs</button>
+        <button onclick="verRutina('viernes')">Viernes - Brazos</button>
+      </div>
+    </main>
+
+    <section id="rutina-view" class="oculto">
+      <button onclick="volver()">⬅ Volver</button>
+      <h2 id="dia-titulo"></h2>
+      <div id="ejercicios"></div>
+      <button onclick="marcarCompletado()">✔ Día Completado</button>
+    </section>
+
+    <footer>
+      <p>Hecho para personas reales. Sin excusas. Sin complicaciones.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
