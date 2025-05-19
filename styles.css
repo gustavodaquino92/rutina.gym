@@ -1,0 +1,104 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #222;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+button {
+  font-size: 14px;
+  padding: 12px;
+  margin: 8px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: yellow;
+  color: #000;
+}
+
+#toggle-mode {
+  display: block;
+  margin: 10px auto;
+  background-color: #444;
+}
+
+.dias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ejercicios {
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.oculto {
+  display: none;
+}
+
+.completado {
+  border: 2px solid green;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive */
+@media (min-width: 600px) {
+  .dias {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .dias button {
+    width: 40%;
+  }
+}
+
+/* Modo claro */
+body.claro {
+  background-color: #f2f2f2;
+  color: #111;
+}
+
+body.claro button {
+  background-color: #ddd;
+  color: #000;
+}
+
+body.claro button:hover {
+  background-color: #444;
+  color: #fff;
+}
